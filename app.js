@@ -20,6 +20,12 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(sass({
+        src: path.join(__dirname, 'assets'), //where the sass files at
+        dest: path.join(__dirname, 'public'), //where they will be converted to css
+        // outputStyle: 'compressed',
+        debug: true
+}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
