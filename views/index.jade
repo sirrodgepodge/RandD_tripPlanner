@@ -1,5 +1,20 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+	h1= title
+	h3 Place
+		ul
+			each val in Place
+				li= val.address + ', ' + val.city + ', ' + val.state
+	h3 Hotel
+		ul
+			each val in Hotel
+				li= val.name
+	h3 ThingToDo
+		ul
+			each val in ThingToDo
+				li= val.place
+	h3 Restaurant
+		ul
+			each val in Restaurant
+				li= val.name
