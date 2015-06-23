@@ -1,0 +1,20 @@
+{
+  "name": "RandDtripPlanner",
+  "version": "0.0.0",
+  "homepage": "https://github.com/sirrodgepodge/RandD_tripPlanner",
+  "authors": [
+    "David Tebbi <davidtebbi@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.5"
+  }
+}

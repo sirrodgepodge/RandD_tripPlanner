@@ -6,22 +6,23 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-	renderObj = {title: 'Big Trippin'};
+	renderObj = {};
 	async.each(Object.keys(db),
 		function(modelName, done) {
-			db[modelName].find(function(err, val){
+			db[modelName].find({}, function(err, val){
 				if(err) console.log(err);
 				renderObj[modelName] = val;
 				console.log(modelName, ': ', val);
 				done(null);
 			});
 		},
-		function(err) {
-			if(err) {
-				console.log(err);
-				return next(err);
+		function(error) {
+			if(error) {
+				console.log(error);
+				return next(error);
 			}
-			res.render('index', renderObj);
+			console.log(renderObj);
+			res.render('index', {locals: renderObj});
 		}
 	);
 });
