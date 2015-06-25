@@ -1,29 +1,13 @@
 extends layout
 
 block content
-	//- h1= title
-	//- h3 Place
-	//- 	ul
-	//- 		each val in Place
-	//- 			li= val.address + ', ' + val.city + ', ' + val.state
-	//- h3 Hotel
-	//- 	ul
-	//- 		each val in Hotel
-	//- 			li= val.name
-	//- h3 ThingToDo
-	//- 	ul
-	//- 		each val in ThingToDo
-	//- 			li= val.name
-	//- h3 Restaurant
-	//- 	ul
-	//- 		each val in Restaurant
-	//- 			li= val.name
 	.container
-		.header WELCOME FRIENDS!!!!!!!!!!!!!!
-		.map THIS IS WHERE OUR MAP IS GOING TO BEEEEEEEEEE
+		.navbar 
+			span.glyphicon.glyphicon-map-marker TripPlanner
+		.map#map
 		.filters
 			.items
-				each val, prop in locals 
+				each val, prop in locals.renderObj
 					label #{prop}
 					input(list="#{prop}" name="#{prop}")
 					datalist(id="#{prop}")

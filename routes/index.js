@@ -3,7 +3,6 @@ var async = require('async');
 var db = require('../models/');
 var router = express.Router();
 
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
 	renderObj = {};
@@ -22,7 +21,11 @@ router.get('/', function(req, res, next) {
 				return next(error);
 			}
 			console.log(renderObj);
-			res.render('index', {locals: renderObj});
+			var locals = {};
+			// locals.renderObj = renderObj;
+			//console.log(locals);
+			locals.renderObj = renderObj;
+			res.render('index', locals);
 		}
 	);
 });

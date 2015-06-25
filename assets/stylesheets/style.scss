@@ -7,12 +7,13 @@
     align-items: stretch;
 }
 		
- .header {
+ .navbar {
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: 100%;
-    background-color:   yellow;
+    background-color:   brown;
     padding: 10px 0;
+    margin: 0;
 }
 	
  .map {

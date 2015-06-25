@@ -32,7 +32,6 @@ var restaurantSchema= new mongoose.Schema({
 	price:		Number
 });
 
-module.exports.Place = mongoose.model('Place', placeSchema);
 module.exports.Hotel = mongoose.model('Hotel', hotelSchema);
 module.exports.ThingToDo = mongoose.model('ThingToDo', thingToDoSchema);
 module.exports.Restaurant = mongoose.model('Restaurant', restaurantSchema);
